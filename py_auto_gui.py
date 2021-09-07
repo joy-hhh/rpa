@@ -55,5 +55,13 @@ p.hotkey('ctrl', 'shift', 'esc')  # 2개 이상의 키보드 키를 KeyDown 하�
 p.alert(text = '확인되었습니다.', title = '인증', button = 'OK')
 p.confirm(text = '계속 진행하시겠습니까?', title = '경고', buttons=['OK', 'Cancel'])
 
+p.prompt(text = '아이디를 입력해 주세요.', title= '로그인', default = 'RPA_TEST')
+p.password(text='패스워드를 입력해 주세요.', title='비밀번호', default='')
 
+# 스크린샷
+
+## 모니터 전체 화면을 이미지 객체로 전환
+im1 = p.screenshot()
+im2 = p.screenshot('my_screenshot.png')  # full path를 지정할 수 있다.
+im3 = p.screenshot('my_screenshot.png', region=(0,0,300,400))
 
