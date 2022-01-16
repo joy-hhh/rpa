@@ -5,13 +5,18 @@ import jinja2
 import pandas as pd
 
 # Load Template from financials , add context for cy and py, and render
-doc = DocxTemplate('note.docx')
+doc = DocxTemplate('test.docx')
 context = {
-    'cur_year' : 2021,
-    'prior_year' : 2020
+    'plus' : "2,021",
+    'minus' : "(2,020)",
+    'zero' : "-"
 }
 doc.render(context)
-doc.save("note_output.docx")
+doc.save("test_output.docx")
+
+
+
+
 
 
 # Load note data from excel file
