@@ -29,15 +29,10 @@ for key in context:
 
 fiscal_year = {
     'cur_year' : "2021",
-    'prior_year' : "2020"
-}
-context.update(fiscal_year)
-
-exrate = {
+    'prior_year' : "2020",
     'exrate' : "1,185.5"
 }
-
-context.update(exrate)
+context.update(fiscal_year)
 
 doc.render(context)
 doc.save("note_output.docx")
